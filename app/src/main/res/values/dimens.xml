@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="titulo">3mm</dimen>
+    <dimen name="subtitulo">2.5mm</dimen>
+    <dimen name="espaciox">1mm</dimen>
+    <dimen name="espacioy">2mm</dimen>
+</resources>

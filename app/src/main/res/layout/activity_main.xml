@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alejo_zr.datosusuario.MainActivity">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/nombreContacto"
+
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilCumpleaños"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tilNombre"
+
+        tools:layout_editor_absoluteX="0dp">
+        <Button
+            android:id="@+id/bCumpleaños"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cumpleaños"
+            android:onClick="showTimePickerDialog" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tilNombre"
+        app:layout_constraintLeft_toRightOf="@+id/tilCumpleaños">
+        <EditText
+            android:id="@+id/txtCumpleaños"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:hint="D/MM/YY"
+            />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tilCumpleaños"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/txtTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/telefonoContacto"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tilTelefono"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="@string/emailContacto"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/txtDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:hint="@string/descripcion"
+            />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/tilSiguiente"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="201dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        >
+
+        <Button
+            android:id="@+id/bSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/siguiente"
+            android:textColor="@color/texto"
+            android:textStyle="bold"
+            android:textSize="3mm"/>
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
